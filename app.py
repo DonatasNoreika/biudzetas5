@@ -24,5 +24,10 @@ def prideti():
         return redirect("biudzetas")
     return render_template('prideti.html')
 
+@app.route("/istrinti/<int:index>")
+def istrinti(index):
+    zurnalas.pop(index)
+    return biudzetas()
+
 if __name__ == "__main__":
     app.run(debug=True)

@@ -7,6 +7,7 @@
 {% for irasas in zurnalas %}
 <hr>
 <li>{{irasas}}</li>
+    <a href="{{ url_for('istrinti', index=zurnalas.index(irasas)) }}">Ištrinti</a>
 {% endfor %}
 {% else %}
     <b>Žurnale nėra įrašų</b>
