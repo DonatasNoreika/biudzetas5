@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Biudžetas{% endblock %}
+{% block content %}
+<h1>Biudžeto įrašai:</h1>
+<ul>
+{% if zurnalas %}
+{% for irasas in zurnalas %}
+<hr>
+<li>{{irasas}}</li>
+{% endfor %}
+{% else %}
+    <b>Žurnale nėra įrašų</b>
+{% endif %}
+</ul>
+
+{% endblock %}
